@@ -17,7 +17,8 @@ cd existing_repo
 mvn spring-boot:run
 ```
 
-#Swagger Documentation
+# Swagger Documentation
 http://mutantapp-env.eba-cwrtnymi.us-east-1.elasticbeanstalk.com/swagger-ui.html
-#Health Check
+
+# Health Check
 http://mutantapp-env.eba-cwrtnymi.us-east-1.elasticbeanstalk.com/actuator/health
