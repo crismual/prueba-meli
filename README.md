@@ -1,4 +1,4 @@
-# Technical Test Mercado Libre
+# Technical test Mercado Libre
 
 technical test to qualify for the position of senior java developer in Mercado Libre
 
@@ -10,10 +10,14 @@ technical test to qualify for the position of senior java developer in Mercado L
     
 </ol>
 
-# Run The Application
+# Run the application
 
 ```
 cd existing_repo
 mvn spring-boot:run
 ```
 
+#Swagger Documentation
+http://mutantapp-env.eba-cwrtnymi.us-east-1.elasticbeanstalk.com/swagger-ui.html
+#Health Check
+http://mutantapp-env.eba-cwrtnymi.us-east-1.elasticbeanstalk.com/actuator/health
