@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class MutanEntityTest {
 
     @Test
-    public void TestContructorArgs(){
+    public void testContructorArgs(){
 
         MutantEntity mutantEntity = new MutantEntity("AR22V8XRD3D9S","ATCGCC|TCGATC|TATTGC|AGGAGC|CCGCTA|TCTCTG",true);
 
@@ -17,7 +17,7 @@ public class MutanEntityTest {
     }
 
     @Test
-    public void TestContructorNoArgs(){
+    public void testContructorNoArgs(){
 
         MutantEntity mutantEntity = new MutantEntity();
 

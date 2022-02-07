@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 public class Log4jImpl implements ILoggerStrategy {
 
-    private Logger logger = LoggerFactory.getLogger(Log4jImpl.class);
+    private static Logger logger = LoggerFactory.getLogger(Log4jImpl.class);
 
     @Override
     public void logInfo(String msg) {

@@ -10,6 +10,10 @@ public class DnaRequestDTO {
     public DnaRequestDTO() {
     }
 
+    public DnaRequestDTO(String[] dna) {
+        this.dna = dna;
+    }
+
     public String[] getDna() {
         return dna;
     }
@@ -33,8 +37,4 @@ public class DnaRequestDTO {
         return Arrays.equals(dna, that.dna);
     }
 
-    @Override
-    public int hashCode() {
-        return Arrays.hashCode(dna);
-    }
 }

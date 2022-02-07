@@ -11,7 +11,7 @@ public class ResponseUtil {
         return new ResponseEntity(HttpStatus.FORBIDDEN);
     }
 
-    public static ResponseEntity Error(Object obj){
+    public static ResponseEntity error(Object obj){
         return new ResponseEntity(obj,HttpStatus.INTERNAL_SERVER_ERROR);
     }
 

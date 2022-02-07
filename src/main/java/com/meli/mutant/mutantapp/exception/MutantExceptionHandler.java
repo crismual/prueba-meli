@@ -12,8 +12,8 @@ import org.springframework.web.client.HttpServerErrorException;
 public class MutantExceptionHandler {
 
     @ExceptionHandler(HttpServerErrorException.InternalServerError.class)
-    public ResponseEntity databaseError(Exception e) {
+    public ResponseEntity generalError(Exception e) {
         Error error = new Error(Constants.GENERAL_ERROR_CODE,e.getMessage());
-        return ResponseUtil.Error(error);
+        return ResponseUtil.error(error);
     }
 }
