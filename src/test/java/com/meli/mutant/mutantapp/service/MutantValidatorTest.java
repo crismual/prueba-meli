@@ -2,10 +2,8 @@ package com.meli.mutant.mutantapp.service;
 
 import org.assertj.core.api.BDDAssertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-@Disabled
 public class MutantValidatorTest {
 
     private MutantValidator mutantValidator;
@@ -19,20 +17,8 @@ public class MutantValidatorTest {
     public void testValidateMutant_invalidCharacter() {
         //given
         String[] dna = {"CTXTGT", "CPATCT", "CGKANC", "AGAAAG", "TTATAA", "LGCTGC"};
-        //when
-        boolean result = mutantValidator.isMutant(dna);
-        //then
-        BDDAssertions.then(result).isFalse();
-    }
-
-    @Test
-    public void testValidateMutant_emptySequence() {
-        //given
-        String[] dna = new String[5];
-        //when
-        boolean result = mutantValidator.isMutant(dna);
-        //then
-        BDDAssertions.then(result).isFalse();
+        //when-then
+        BDDAssertions.thenExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> mutantValidator.isMutant(dna)).withMessageContaining("Invalid character");
     }
 
     @Test
@@ -58,6 +44,7 @@ public class MutantValidatorTest {
 
     @Test
     public void testValidateMutant_diagonalRightSequences() {
+
         //given
         String[] dna = {"CTCTGT", "CAATCT", "CGAAGC", "AGAAAG", "TTCTAA", "AGCTGC"};
         //when

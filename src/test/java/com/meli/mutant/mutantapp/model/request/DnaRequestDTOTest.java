@@ -75,6 +75,7 @@ public class DnaRequestDTOTest {
         BDDAssertions.then(dnaRequestDTO01).isNotNull();
         BDDAssertions.then(dnaRequestDTO01.equals(dnaRequestDTO02)).isEqualTo(false);
 
+
     }
 
 
